@@ -5,12 +5,10 @@ using UnityEngine;
 public class AbrePuertas : MonoBehaviour
 {
     public string tagPlayer;
-    public string tagEnemy = "SIN ETIQUETAR";
     public Animator animatorPuerta;
     void OnTriggerEnter(Collider other)
     {
-        
-        if (other.gameObject.CompareTag(tagPlayer) || other.gameObject.CompareTag(tagEnemy))
+        if (other.gameObject.tag!=null && other.gameObject.CompareTag(tagPlayer))
         {
             animatorPuerta.enabled = true;
         }
