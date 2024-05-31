@@ -14,7 +14,9 @@ public class PlayerHealthManager : MonoBehaviour
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();    
     }
 
+
     public int Salud=100;
+    public int SaludMaxima = 100;
     public void RecibirPupa(int pupa){
         gameManager.DecrementarSalud(pupa);
         Salud-=pupa;

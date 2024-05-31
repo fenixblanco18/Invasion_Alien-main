@@ -28,13 +28,17 @@ public class ObjetoParaVida : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             CancelInvoke("HacerDanyo");
-            // Aquí puedes destruir el objeto una vez que el jugador se aleje.
-            Destroy(gameObject);
+            // Aquí puedes destruir el objeto una vez que el jugador se aleje.            
         }
     }
 
     private void HacerDanyo()
     {
-        transformPlayer.gameObject.GetComponent<PlayerHealthManager>()?.RecibirPupa(danyo);
+        if (transformPlayer.gameObject.GetComponent<PlayerHealthManager>()?.Salud<transformPlayer.gameObject.GetComponent<PlayerHealthManager>()?.SaludMaxima)
+        {
+            transformPlayer.gameObject.GetComponent<PlayerHealthManager>()?.RecibirPupa(danyo);
+            Destroy(gameObject);
+        }
+        
     }
 }

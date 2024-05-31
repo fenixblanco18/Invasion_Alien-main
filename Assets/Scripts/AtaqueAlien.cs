@@ -8,7 +8,7 @@ public class AtaqueAlien : MonoBehaviour
     public int GolpeGarra = 1;
     void OnTriggerEnter(Collider collision)
     {
-        print("Trigger");
+    
         if (collision.gameObject.CompareTag("Player"))
         {
             collision.gameObject.GetComponent<PlayerHealthManager>().RecibirPupa(GolpeGarra);

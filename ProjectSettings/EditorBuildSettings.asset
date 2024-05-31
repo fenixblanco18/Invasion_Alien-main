@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/MyAssets/Scenes/03-ExteriorScene.unity
     guid: aa77a6e7c2f35814a976dfbcd4cb46a8
+  - enabled: 1
+    path: Assets/SkySeries Freebie/ExampleScenes/04-UnEarthlyRed.unity
+    guid: acc44db00cf3703479df04ea90bad261
   m_configObjects: {}
